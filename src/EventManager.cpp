@@ -18,41 +18,7 @@ unsigned int fnv1a(std::string& str) {
 }
 
 void EventManager::update() {
-	SDL_Event e;
-
-	while (SDL_PollEvent(&e)) {
-		if (e.type == SDL_KEYDOWN) {
-			if (e.key.keysym.sym == SDLK_ESCAPE) {
-				push_event("InputExit", nullptr);
-			}
-
-			Movement* m = new Movement();
-			m->speed = 255;
-
-			switch (e.key.keysym.sym) {
-			case SDLK_w:
-				m->direction = 0;
-				push_event("InputMovement", (void*)m);
-				break;
-
-			case SDLK_a:
-				m->direction = 192;
-				push_event("InputMovement", (void*)m);
-				break;
-
-			case SDLK_s:
-				m->direction = 128;
-				push_event("InputMovement", (void*)m);
-				break;
-
-			case SDLK_d:
-				m->direction = 64;
-				push_event("InputMovement", (void*)m);
-				break;
-			}
-		}
-	}
-
+	
 	Event ev;
 	while (events.size() > 0) {
 		ev = events.front();
@@ -61,6 +27,7 @@ void EventManager::update() {
 			printf("Event: %s\n", ev.name.c_str());
 			s.proc(ev.arguments);
 		}
+		events.pop_front();
 	}
 }
 

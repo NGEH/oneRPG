@@ -8,13 +8,9 @@ void Renderer::initialise(SDL_Window* window) {
 void Renderer::shutdown() {
 	if (renderer) SDL_DestroyRenderer(renderer);
 	if (window)   SDL_DestroyWindow(window);
-
-
 }
 
 void Renderer::update() {
 	SDL_RenderClear(renderer);
-
-
 	SDL_RenderPresent(renderer);
 }
