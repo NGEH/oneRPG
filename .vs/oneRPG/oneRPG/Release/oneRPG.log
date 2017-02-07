@@ -1,0 +1,9 @@
+﻿  EventManager.cpp
+  InputManager.cpp
+  Main.cpp
+..\..\..\src\Main.cpp(48): warning C4101: 'e': unreferenced local variable
+  Renderer.cpp
+  Generating code
+  All 342 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  oneRPG.vcxproj -> C:\Users\Ryan\oneRPG\.vs\oneRPG\Release\oneRPG.exe

@@ -1,0 +1,7 @@
+﻿  Main.cpp
+c:\users\ryan\onerpg\src\main.cpp(48): warning C4101: 'e': unreferenced local variable
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Renderer.cpp
+  oneRPG.vcxproj -> C:\Users\Ryan\oneRPG\.vs\oneRPG\x64\Debug\oneRPG.exe
+  oneRPG.vcxproj -> C:\Users\Ryan\oneRPG\.vs\oneRPG\x64\Debug\oneRPG.pdb (Partial PDB)

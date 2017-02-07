@@ -4,6 +4,8 @@
 #include <cstdio>
 
 #include <SDL.h>
+#include <SDL_ttf.h>
+
 #include "Renderer.h"
 #include "EventManager.h"
 #include "InputManager.h"
@@ -30,6 +32,8 @@ int main() {
 	bool running = true;
 
 	SDL_Init(SDL_INIT_EVERYTHING);
+	TTF_Init();
+
 	SDL_Window* window = SDL_CreateWindow("win", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, SDL_WINDOW_SHOWN);
 
 	// Initialize modules
@@ -42,6 +46,7 @@ int main() {
 
 	// @Temporary: create an event manager to deal with these
 	SDL_Event e;
+	Font f("arial.ttf");
 
 	while (running) {
 		
@@ -51,8 +56,10 @@ int main() {
 			sprintf_s(str, "%d, %d", x, y);
 			SDL_SetWindowTitle(window, str);
 		}
-
-
+		
+		renderer.clear({ 255,0,0 });
+		renderer.draw_rectangle(x, y, 50, 50, { 3,240,180 });
+		renderer.draw_text(0, 0, "Hello, World!", f);
 		renderer.update();
 		event_manager.update();
 		input_manager.update();
@@ -63,7 +70,7 @@ int main() {
 	event_manager.update();
 	input_manager.shutdown();
 
-
+	TTF_Quit();
 	SDL_Quit();
 	return 0;
 }

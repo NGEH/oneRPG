@@ -1,0 +1,14 @@
+﻿  Main.cpp
+..\..\..\src\Main.cpp(49): warning C4129: 'W': unrecognized character escape sequence
+..\..\..\src\Main.cpp(49): warning C4129: 'S': unrecognized character escape sequence
+..\..\..\src\Main.cpp(49): warning C4129: 'F': unrecognized character escape sequence
+..\..\..\src\Main.cpp(49): warning C4129: 'A': unrecognized character escape sequence
+..\..\..\src\Main.cpp(48): warning C4101: 'e': unreferenced local variable
+  Renderer.cpp
+..\..\..\src\Renderer.cpp(35): warning C4838: conversion from 'int' to 'Uint8' requires a narrowing conversion
+  Generating code
+  3 of 344 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  oneRPG.vcxproj -> C:\Users\Ryan\oneRPG\.vs\oneRPG\x64\Release\oneRPG.exe
